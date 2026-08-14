@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: qq-ai-bot
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    envVars:
+      - key: QQ_APP_ID
+        value: "1904363546"
+      - key: QQ_APP_SECRET
+        value: "rhYPH92vpkfbXURPONNNOPRUXbfkpv29"
+      - key: ZHIPU_API_KEY
+        value: "139b41c531f64da8b88aa1f3eb4e3d13.w0hrbh0N5qVlK3T7"
+      - key: ZHIPU_MODEL
+        value: "glm-4.7-flash"
+      - key: PORT
+        value: "10000"
